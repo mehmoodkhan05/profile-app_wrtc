@@ -49,7 +49,7 @@ session_start();
         <div class="right-side" id="navbarNavDropdown">
           <ul class="navbar-nav fs-5">
             <?php
-            if (isset($_SESSION['unique_id'])) {
+            if (isset($_SESSION['unique_id'])) :
             ?>
               <li class="nav-item dropdown">
                 <a class="nav-link active text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,17 +62,18 @@ session_start();
                   <li>
                     <a href="logout.php" class="logout dropdown-item">Logout</a>
                   </li>
+                  <li>
+                    <a href="delete.php?unique_id=<?php echo $_SESSION['unique_id']; ?>" class="logout dropdown-item">Delete Account</a>
+                  </li>
                 </ul>
               </li>
             <?php
-            } else {
-            ?>
+            else : ?>
               <li class="nav-item me-4">
                 <a class="nav-link text-white" href="login.php">Login</a>
               </li>
             <?php
-            }
-            ?>
+            endif; ?>
           </ul>
         </div>
       </div>

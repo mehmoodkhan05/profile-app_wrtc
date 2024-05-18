@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="form-group mt-4">
             <label for="profile">Upload Picture:</label>
-            <input type="file" class="form-control mt-3" id="image" name="image" accept="image/*" required>
+            <input type="file" class="form-control mt-3" id="image" name="image" accept="image/*">
           </div>
           <div class="text-center mt-4">
             <p>Already a member?
